@@ -2,6 +2,10 @@
 
 Maquette responsive d’un carnet de voyage, réalisée en HTML, CSS/LESS et JavaScript.
 
+## Site en ligne
+
+[Découvrir Échappées](https://kesary-p.github.io/echappees-voyage/)
+
 ## Pages
 
 - Accueil : `index.html`
