@@ -1,0 +1,11 @@
+{
+  "name": "echappees-voyage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "lessc styles.less styles.css"
+  },
+  "devDependencies": {
+    "less": "^4.2.2"
+  }
+}

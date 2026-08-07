@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Échappées, un carnet de voyage interactif pour trouver et organiser sa prochaine aventure.">
+  <title>Échappées — Carnet de voyage interactif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="#accueil" aria-label="Échappées, retour à l'accueil">ÉCHAPPÉES</a>
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">☰</button>
+    <nav id="main-nav" aria-label="Navigation principale">
+      <a href="#destinations">Destinations</a><a href="#carnets">Carnets</a><a href="#conseils">Conseils</a><a href="#apropos">À propos</a>
+    </nav>
+    <button data-open-planner>Préparer mon voyage</button>
+  </header>
+
+  <main id="accueil">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p>Carnet de voyage interactif</p>
+        <h1 id="hero-title">Partir moins loin.<br>Vivre plus grand.</h1>
+        <p>Des itinéraires inspirants, des adresses choisies et des souvenirs à garder au même endroit.</p>
+        <div>
+          <a href="#destinations">Explorer les carnets</a>
+          <button id="surprise-button" type="button">Surprends-moi</button>
+        </div>
+      </div>
+      <img src="assets/images/hero.jpg" alt="Route panoramique traversant un paysage montagneux">
+    </section>
+
+    <section id="destinations" class="destinations" aria-labelledby="destinations-title">
+      <h2 id="destinations-title">Où veux-tu t’évader&nbsp;?</h2>
+      <p>Choisis une ambiance et laisse-toi guider.</p>
+      <div role="group" aria-label="Filtrer les destinations">
+        <button class="is-active" type="button" data-filter="all">Tout</button>
+        <button type="button" data-filter="mer">Mer</button>
+        <button type="button" data-filter="montagne">Montagne</button>
+        <button type="button" data-filter="ville">Ville</button>
+        <button type="button" data-filter="nature">Nature</button>
+      </div>
+
+      <div aria-live="polite">
+        <article data-category="ville mer" data-name="Lisbonne solaire">
+          <div><img src="assets/images/lisbon.jpg" alt="Vue lumineuse de Lisbonne au bord de l'eau"><button data-favorite type="button" aria-label="Ajouter Lisbonne solaire aux favoris" aria-pressed="false">♡</button></div>
+          <h3>Lisbonne solaire</h3><p>Portugal · 4 jours</p><a href="Lisbonne/index.html">Découvrir <span aria-hidden="true">→</span></a>
+        </article>
+        <article data-category="nature montagne" data-name="Lacs italiens">
+          <div><img src="assets/images/lakes.jpg" alt="Village coloré près des lacs italiens"><button data-favorite type="button" aria-label="Ajouter Lacs italiens aux favoris" aria-pressed="false">♡</button></div>
+          <h3>Lacs italiens</h3><p>Italie · 6 jours</p><a href="#carnets">Découvrir <span aria-hidden="true">→</span></a>
+        </article>
+        <article data-category="mer nature" data-name="Échappée bretonne">
+          <div><img src="assets/images/brittany.jpg" alt="Plage sauvage au lever du soleil"><button data-favorite type="button" aria-label="Ajouter Échappée bretonne aux favoris" aria-pressed="false">♡</button></div>
+          <h3>Échappée bretonne</h3><p>France · 3 jours</p><a href="#carnets">Découvrir <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <p id="empty-state" hidden>Aucune destination dans cette catégorie pour le moment.</p>
+    </section>
+
+    <section id="carnets" class="planner" aria-labelledby="planner-title">
+      <div><p>Ton prochain départ</p><h2 id="planner-title">Compose ton voyage,<br>étape par étape.</h2><p>Ajoute tes coups de cœur, organise tes journées et retrouve ton itinéraire même hors connexion.</p><button type="button" data-open-planner>Créer mon itinéraire</button></div>
+      <div><h3>Escapade à Lisbonne</h3><p>12 — 15 septembre · 4 jours</p><ol><li><strong>Jour 1</strong> Alfama &amp; miradouros</li><li><strong>Jour 2</strong> Belém &amp; bord du Tage</li><li><strong>Jour 3</strong> Sintra, palais &amp; jardins</li></ol></div>
+    </section>
+  </main>
+
+  <footer id="apropos"><div><div><a href="#accueil">ÉCHAPPÉES</a><p>Voyager avec curiosité,<br>collectionner les émotions.</p></div><div><nav aria-label="Navigation de pied de page"><a href="#destinations">Destinations</a><a href="#carnets">Carnets</a><a id="conseils" href="#accueil">Conseils</a><a href="contact/index.html">Contact</a></nav><small>© 2026 Échappées — Projet portfolio de Kesary</small></div></div></footer>
+
+  <dialog id="planner-dialog" aria-labelledby="dialog-title"><button type="button" aria-label="Fermer">×</button><p>Mon itinéraire</p><h2 id="dialog-title">Préparons ton échappée</h2><form id="trip-form"><label>Destination<input name="destination" required placeholder="Ex. Lisbonne"></label><label>Date de départ<input name="date" type="date" required></label><label>Durée<select name="duration"><option>3 jours</option><option>4 jours</option><option>1 semaine</option><option>2 semaines</option></select></label><button type="submit">Créer mon carnet</button><p role="status"></p></form></dialog>
+</body>
+</html>

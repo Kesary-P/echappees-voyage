@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Échappées pour préparer votre prochain voyage.">
+  <title>Contact — Échappées</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="contact.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="../index.html" aria-label="Échappées, retour à l'accueil">ÉCHAPPÉES</a>
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">☰</button>
+    <nav id="main-nav" aria-label="Navigation principale">
+      <a href="../index.html#destinations">Destinations</a><a href="../index.html#carnets">Carnets</a><a href="../index.html#conseils">Conseils</a><a href="../index.html#apropos">À propos</a>
+    </nav>
+    <a href="../index.html">Retour à l’accueil</a>
+  </header>
+
+  <main>
+    <section class="contact" aria-labelledby="contact-title">
+      <div>
+        <p>Parlons de ton prochain départ</p>
+        <h1 id="contact-title">Une question,<br>une envie d’évasion&nbsp;?</h1>
+        <p>Raconte-nous le voyage que tu imagines. Nous te répondrons avec des premières pistes pour construire ton escapade.</p>
+        <ul><li>Une réponse personnalisée</li><li>Des idées adaptées à ton rythme</li><li>Aucun engagement</li></ul>
+      </div>
+      <form id="contact-form">
+        <label>Nom<input name="name" required autocomplete="name" placeholder="Votre nom"></label>
+        <label>E-mail<input name="email" type="email" required autocomplete="email" placeholder="vous@exemple.fr"></label>
+        <label>Votre envie de voyage<select name="subject"><option>Un week-end en ville</option><option>Une escapade au soleil</option><option>Un séjour nature</option><option>Autre projet</option></select></label>
+        <label>Message<textarea name="message" required rows="6" placeholder="Parlez-nous de votre projet..."></textarea></label>
+        <button type="submit">Envoyer mon message</button>
+        <p role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><div><div><a href="../index.html">ÉCHAPPÉES</a><p>Voyager avec curiosité,<br>collectionner les émotions.</p></div><div><nav aria-label="Navigation de pied de page"><a href="../index.html#destinations">Destinations</a><a href="../index.html#carnets">Carnets</a><a href="../index.html#conseils">Conseils</a><a href="index.html">Contact</a></nav><small>© 2026 Échappées — Projet portfolio de Kesary</small></div></div></footer>
+</body>
+</html>
