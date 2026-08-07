@@ -37,6 +37,12 @@ Les écrans de référence sont présentés en versions desktop (1440 × 1080 px
 | --- | --- |
 | ![Maquette desktop de la page Lisbonne Solaire](docs/maquettes/lisbonne-desktop.png) | ![Maquette mobile de la page Lisbonne Solaire](docs/maquettes/lisbonne-mobile.png) |
 
+### Interaction JavaScript
+
+Le formulaire d’itinéraire s’ouvre dans une fenêtre modale pilotée en JavaScript.
+
+![Formulaire d’itinéraire ouvert avec JavaScript](docs/maquettes/javascript-formulaire-itineraire.png)
+
 ## Lancer le projet
 
 Le site est statique. Il peut être ouvert directement dans un navigateur ou servi par un serveur HTTP local.
